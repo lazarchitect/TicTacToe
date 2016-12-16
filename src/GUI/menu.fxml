@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:controller="GUI.MenuController" prefHeight="131.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id = "PvP" onAction="#PvP" layoutX="137.0" layoutY="83.0" mnemonicParsing="false" text="PvP" />
+      <Button fx:id = "AI" onAction="#AI" layoutX="333.0" layoutY="83.0" mnemonicParsing="false" text="vs. AI" />
+      <Text layoutX="173.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a game mode to play:" />
+   </children>
+</AnchorPane>
