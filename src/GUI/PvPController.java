@@ -25,12 +25,9 @@ public class PvPController {
 	
 	Board b = new Board();
 	
-	
-	
 	int i = -1;
 	String xImg = "GUI/X.png";
 	String oImg = "GUI/O.png";
-	String spaceImg = "GUI/space.png";
 	
 	Stage parent;
 	Stage thisOne;
@@ -41,16 +38,6 @@ public class PvPController {
 		thisOne = stage;
 		this.parent = parent;
 	}
-	
-//	public void click(Node node){
-//		if(node.getClass().getName().equals("ImageView")==false) return;
-//		ImageView n = (ImageView)zero.getScene().lookup("#"+node);
-//		i++;
-//		if(i%2==0) n.setImage(new Image(xImg));
-//		else n.setImage(new Image(oImg));
-//		n.setDisable(true);
-//		System.out.println("oh fuck.");
-//	}
 	
 	public void disableAll(){
 		zero.setDisable(true);

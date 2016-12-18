@@ -35,7 +35,7 @@ public class AIController {
 	Stage thisOne;
 	
 	public void start(Stage stage, Stage parent){
-		//t.setText("Player one, your turn.");
+		t.setText("Player one, your turn.");
 		replay.setDisable(true);
 		thisOne = stage;
 		this.parent = parent;		
@@ -55,6 +55,7 @@ public class AIController {
 	
 	public void activate(ImageView num, int x){
 		
+		//player takes a turn
 		num.setImage(new Image(xImg));
 		b.playerMove(x);
 		num.setDisable(true);
@@ -71,6 +72,14 @@ public class AIController {
 			replay.setDisable(false);
 			return;
 		}
+	
+		t.setText("AI is thinking...");
+		
+		try{Thread.sleep((int)(Math.random()*2000));}
+		catch(InterruptedException e){
+			System.out.println("This should never be printed.");
+		}
+		//AI takes a turn
 		
 		x = b.levelOne();
 		switch(x){
@@ -100,6 +109,7 @@ public class AIController {
 			disableAll();
 			replay.setDisable(false);
 		}
+		t.setText("Player one, your turn."); 
 	}
 	
 	
